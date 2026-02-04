@@ -65,4 +65,80 @@
                                             "animated": true
                                         },
                                         {
-                                            "type": "button
+                                            "type": "button",
+                                            "action": {
+                                                "type": "uri",
+                                                "label": "เข้าชมเว็บไซต์",
+                                                "uri": "https://sites.google.com/view/lib-student2"
+                                            },
+                                            "position": "absolute",
+                                            "offsetTop": "85%",
+                                            "offsetEnd": "15%",
+                                            "offsetStart": "15%",
+                                            "style": "secondary",
+                                            "height": "sm",
+                                            "color": "#ffffffcc"
+                                        }
+                                    ],
+                                    "paddingAll": "none"
+                                }
+                            },
+                            {
+                                "type": "bubble",
+                                "hero": {
+                                    "type": "image",
+                                    "url": "https://img2.pic.in.th/360x450px-ezgif.com-gif-to-apng-converter.png",
+                                    "size": "full",
+                                    "aspectMode": "cover",
+                                    "aspectRatio": "2.9:3",
+                                    "action": {
+                                        "type": "uri",
+                                        "label": "ไปที่ Canva",
+                                        "uri": "https://www.canva.com/design/DAHAUtwbqmU/r6wvEHuFmE7fzyXHaidsnA/watch?utm_content=DAHAUtwbqmU&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hf8fd5964f1"
+                                    }
+                                },
+                                "body": {
+                                    "type": "box",
+                                    "layout": "vertical",
+                                    "backgroundColor": "#9370DB",
+                                    "contents": [
+                                        {
+                                            "type": "text",
+                                            "text": "PHYSICS มัธยมปลาย และ คิดให้เจ๊ง",
+                                            "weight": "bold",
+                                            "size": "md",
+                                            "color": "#4A148C",
+                                            "wrap": true
+                                        },
+                                        {
+                                            "type": "text",
+                                            "text": "แนะนำโดย : นตท.รวิภพ อ. และ นตท.ศิรศักดิ์ อ.",
+                                            "size": "sm",
+                                            "color": "#6A1B9A",
+                                            "wrap": true,
+                                            "margin": "md"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]);
+
+            if (result) {
+                // ส่งสำเร็จ ปิดหน้าต่างทันที
+                liff.closeWindow();
+            } else {
+                // กรณีผู้ใช้กดปิดหน้าเลือกเพื่อน
+                document.getElementById('loader').style.display = "none";
+                document.getElementById('status').innerText = "ส่งไม่สำเร็จ หรือคุณยกเลิกการส่ง";
+                document.getElementById('btnShare').style.display = "block";
+            }
+        }
+
+        // เริ่มต้นการทำงาน
+        main();
+    </script>
+</body>
+</html>
